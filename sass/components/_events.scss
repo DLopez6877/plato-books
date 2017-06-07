@@ -1,0 +1,28 @@
+.events {
+  width: 85%;
+  max-width: 1240px;
+  float: right;
+  @include clearfix;
+}
+
+.event {
+  @include box-style(400px, 6);
+  .event-bg {
+    position: relative;
+    background-image: url(../img/jack.jpg);
+    background-size: cover;
+    background-position: center ;
+    height:250px;
+  }
+  h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2em;
+    font-family: $primary-text;
+    text-shadow: 4px 4px 4px grey;
+  }
+}

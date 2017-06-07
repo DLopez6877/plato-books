@@ -1,0 +1,14 @@
+header{
+  background-color: $color-secondary-2;
+  overflow: auto;
+  padding: 0 2%;
+  img{
+    float: left;
+    height: 124px;
+  }
+  .login{
+    float:right;
+    text-align: right;
+    padding-top: 50px;
+  }
+}

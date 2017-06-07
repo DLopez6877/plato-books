@@ -1,0 +1,15 @@
+.side-content{
+  width: 15%;
+  float: left;
+  background-color: $color-tertriary-1;
+  padding-bottom: 30000px;
+  margin-bottom: -30000px;
+  h2{
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    transform: rotate(-90deg);
+    margin-top: 200px;
+    white-space: pre;
+  }
+}

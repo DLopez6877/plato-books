@@ -1,0 +1,10 @@
+section {
+  @include clearfix;
+  margin-bottom: 60px;
+  border-top: 2px dashed $color-primary-1;
+  overflow: hidden;
+}
+
+section:last-of-type {
+  margin-bottom: 150px;
+}

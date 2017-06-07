@@ -1,0 +1,21 @@
+
+nav{
+  ul{
+    background-color: $color-primary-1;
+    width: 100%;
+    @include border-box;
+    li{
+      display: inline-block;
+      padding: 1%;
+      width: 10%;
+      text-align: center;
+      &:hover {
+        background-color: $color-secondary-2;
+        a {
+          color: $color-primary-1;
+        }
+      };
+    }
+
+  }
+}
