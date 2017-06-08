@@ -922,6 +922,11 @@ button:disabled {
     float: right;
   }
 }
+@media (max-width: 415px) {
+  .tall-box {
+    font-size: 90%;
+  }
+}
 
 .cards {
   width: 85%;

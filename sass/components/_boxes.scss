@@ -75,5 +75,8 @@
   @include respond-to("medium") {
     @include box-style(6);
     float: right;
-  }
+  };
+  @include respond-to("x-small") {
+    font-size: 90%;
+  };
 }
