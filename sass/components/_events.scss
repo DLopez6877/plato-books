@@ -15,14 +15,12 @@
     height:250px;
   }
   h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 2em;
-    font-family: $primary-text;
-    text-shadow: 4px 4px 4px grey;
+    @include textHeader;
+  }
+  &:hover {
+    @include hoverBox;
+  }
+  p {
+    @include textP;
   }
 }

@@ -21,8 +21,13 @@ a {
 main{
   max-width: 1470px;
   margin:0 auto;
-  background-color: white;
+  background-color: inherit;
   @include respond-to('x-large') {
     padding-left: 20px;
   };
+}
+
+span {
+  font-weight: bolder;
+  font-size: 25px;
 }

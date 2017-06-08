@@ -22,3 +22,15 @@
   transform: translate(-50%, -50%);
   @include position(absolute, 50% null null 50%);
 }
+
+@mixin textP{
+  font-size: 20px;
+  text-align: center;
+  color: $color-primary-2;
+}
+
+@mixin hoverBox {
+  border: 1px solid black;
+  @include box-sizing(border-box);
+  opacity: 1;
+}

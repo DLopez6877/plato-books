@@ -1,0 +1,4 @@
+button {
+  @include button(shiny, $color-neutral);
+  color: $color-primary-2;
+}

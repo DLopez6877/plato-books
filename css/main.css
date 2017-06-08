@@ -548,12 +548,17 @@ a {
 main {
   max-width: 1470px;
   margin: 0 auto;
-  background-color: white;
+  background-color: inherit;
 }
 @media (min-width: 1470px) {
   main {
     padding-left: 20px;
   }
+}
+
+span {
+  font-weight: bolder;
+  font-size: 25px;
 }
 
 header {
@@ -575,6 +580,8 @@ section {
   margin-bottom: 60px;
   border-top: 2px dashed #1d2742;
   overflow: hidden;
+  background-color: white;
+  padding-bottom: 20px;
 }
 section::after {
   clear: both;
@@ -624,8 +631,8 @@ nav ul li:hover a {
 }
 
 .last-side {
-  padding-bottom: 300px;
-  margin-bottom: -300px;
+  padding-bottom: 400px;
+  margin-bottom: -400px;
 }
 
 footer {
@@ -636,25 +643,44 @@ footer {
   transform: skewY(-4deg);
 }
 
+button {
+  background-color: #e7e1d5;
+  background-image: -webkit-linear-gradient(top, #e7e1d5 0%, #afafb4 50%, #9196a5 50%, #989ba7 100%);
+  background-image: linear-gradient(to bottom,#e7e1d5 0%, #afafb4 50%, #9196a5 50%, #989ba7 100%);
+  border: 1px solid #727284;
+  border-bottom: 1px solid #69625b;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 0 0 #fffee1;
+  color: #333333;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 7px 18px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px #f1ebe0;
+  color: #3d4f80;
+}
+button:hover:not(:disabled) {
+  background-color: #dad2c3;
+  background-image: -webkit-linear-gradient(top, #dad2c3 0%, #a5a3a2 50%, #8a8c93 50%, #919196 100%);
+  background-image: linear-gradient(to bottom,#dad2c3 0%, #a5a3a2 50%, #8a8c93 50%, #919196 100%);
+  cursor: pointer;
+}
+button:active:not(:disabled), button:focus:not(:disabled) {
+  box-shadow: inset 0 0 20px 0 #786d5b;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
 .boxes {
   width: 85%;
   max-width: 1240px;
   float: right;
 }
-.boxes::after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
-.box {
-  position: relative;
-  margin-top: 20px;
-  width: calc(25% - 25px);
-  float: left;
-  margin-left: 20px;
-}
-.box h2 {
+.boxes h2 {
   font-family: "Advent Pro", sans-serif;
   font-weight: bolder;
   color: white;
@@ -666,6 +692,34 @@ footer {
   position: absolute;
   top: 50%;
   left: 50%;
+}
+.boxes::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.boxes > :hover:not(.wrapper) {
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  opacity: 1;
+}
+.boxes .wrapper > :hover {
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  opacity: 1;
+}
+
+.box {
+  position: relative;
+  opacity: .7;
+  margin-top: 20px;
+  width: calc(25% - 25px);
+  float: left;
+  margin-left: 20px;
 }
 
 .wrapper {
@@ -682,7 +736,9 @@ footer {
   width: calc(100% - 40px);
   float: left;
   margin-left: 20px;
+  position: relative;
   background-image: url("../img/all.jpg");
+  opacity: .7;
   background-size: cover;
   background-position: 10% 50%;
   height: 300px;
@@ -698,12 +754,18 @@ footer {
   width: calc(25% - 25px);
   float: left;
   margin-left: 20px;
+  font-size: 20px;
+  text-align: center;
+  color: #3d4f80;
   width: calc(24.5% - 20px);
   margin-left: 0;
   margin-right: 20px;
   overflow: hidden;
   background-color: #e7e1d5;
   height: calc(300px * 2 + 20px);
+}
+.tall-box ol li {
+  padding: 5% 5px;
 }
 
 .cards {
@@ -719,9 +781,12 @@ footer {
   border: 1px solid black;
   float: left;
   margin-top: 20px;
+  font-size: 20px;
+  text-align: center;
+  color: #3d4f80;
 }
 .card img {
-  height: 400px;
+  max-height: 400px;
   width: 50%;
   float: left;
 }
@@ -757,15 +822,64 @@ footer {
   height: 250px;
 }
 .event h2 {
+  font-family: "Advent Pro", sans-serif;
+  font-weight: bolder;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  text-shadow: 2px 2px 2px #3d4f80;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
+}
+.event:hover {
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  opacity: 1;
+}
+.event p {
+  font-size: 20px;
+  text-align: center;
+  color: #3d4f80;
+}
+
+.hover-tile-outer {
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
+  background-color: beige;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid gainsboro;
+  cursor: pointer;
+  height: 10em;
+}
+.hover-tile-outer .hover-tile-container {
+  height: 10em;
+  overflow: hidden;
+}
+.hover-tile-outer .hover-tile-container:hover > .hover-tile {
+  transform: translate(0, -100%);
+}
+.hover-tile-outer .hover-tile {
+  background: inherit;
   color: white;
-  font-size: 2em;
-  font-family: "Abril Fatface", cursive;
-  text-shadow: 4px 4px 4px grey;
+  height: inherit;
+  overflow: hidden;
+  padding: 1.5em;
+  transition: all 0.2s ease-in-out;
+}
+.hover-tile-outer .hover-tile-hidden {
+  background: rgba(0, 0, 0, 0.5);
+}
+.hover-tile-outer .hover-tile-hidden p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5em;
+}
+.hover-tile-outer .hover-tile-hidden h4 {
+  margin: 0 0 0.5em 0;
 }
 
 /*# sourceMappingURL=main.css.map */
