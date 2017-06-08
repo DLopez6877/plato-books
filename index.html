@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Advent+Pro:200|Dosis:300" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css" type="text/css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/scripts.js"></script>
     <title>Plato Books</title>
   </head>
   <body>
@@ -12,11 +14,15 @@
     <header>
       <img src="img/logo1234.png" alt="" />
       <div class="login">
-        <label for="name">Log In:</label>
+        <label for="name">User Name:</label>
         <input type="text" name="name" placeholder="User name">
-        <label for="Password">Pasword:</label>
+        <label for="Password">Password:</label>
         <input type="password" name="Password" placeholder="User password">
+        <button type="button" name="button">Log In</button>
       </div>
+      <button type="button" class="js-menu-trigger sliding-panel-button">
+        =
+      </button>
     </header>
     <nav>
       <ul>
@@ -30,7 +36,19 @@
         <li><a href="#">Kids</a></li>
       </ul>
     </nav>
-
+    <div class="nav2 js-menu sliding-panel-content">
+      <ul>
+        <li><a href="javascript:void(0)">Books</a></li>
+        <li><a href="javascript:void(0)">Textbooks</a></li>
+        <li><a href="javascript:void(0)">Teens</a></li>
+        <li><a href="javascript:void(0)">Kids</a></li>
+        <li><a href="javascript:void(0)">Books</a></li>
+        <li><a href="javascript:void(0)">Textbooks</a></li>
+        <li><a href="javascript:void(0)">Teens</a></li>
+        <li><a href="javascript:void(0)">Kids</a></li>
+      </ul>
+    </div>
+    <div class="js-menu-screen sliding-panel-fade-screen"></div>
     <main>
       <section>
         <div class="side-content">
@@ -172,15 +190,15 @@
             </div>
           </div>
           <div class="event">
-            <div class="event-bg">
-              <h2>Come meet Jack</h2>
+            <div class="event-bg event2">
+              <h2>Storytelling</h2>
             </div>
             <div class="hover-tile-outer">
               <div class="hover-tile-container">
                 <div class="hover-tile hover-tile-visible">
                   <p>Address: Here!</p>
-                  <p>When: June 01</p>
-                  <p>Time: 7:00pm</p>
+                  <p>When: June 07</p>
+                  <p>Time: 4:00pm</p>
                 </div>
                 <div class="hover-tile hover-tile-hidden">
                   <p>Hello come meet me.. lksdhajhdgk jahdsgkhdsagkhadsg jkhdsg.khads.gkhasd</p>
@@ -192,6 +210,9 @@
       </section>
     </main>
     <footer>
+      <img src="img/facebook-logo-button.png" alt="facebook logo" />
+      <img src="img/instagram-logo.png" alt="instagram logo" />
+      <img src="img/twitter-logo-button.png" alt="twitter logo" />
       <p>This is our footer</p>
       <a href="#">Contact Us</a>
       <a href="#">About</a>

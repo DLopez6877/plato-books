@@ -7,11 +7,21 @@
 
 .event {
   @include box-style(6);
+  @include respond-to("small") {
+    @include grid-column(12);
+  }
   .event-bg {
     position: relative;
     background-image: url(../img/jack.jpg);
     background-size: cover;
     background-position: center ;
+    height:250px;
+  }
+  .event2{
+    position: relative;
+    background-image: url(../img/storytelling.jpg);
+    background-size: cover;
+    background-position: 80%;
     height:250px;
   }
   h2 {

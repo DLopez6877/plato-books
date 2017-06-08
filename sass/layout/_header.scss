@@ -7,8 +7,16 @@ header{
     height: 124px;
   }
   .login{
+    display: inline-block;
     float:right;
     text-align: right;
-    padding-top: 50px;
+    padding-top: 5px;
+    width: 300px;
+    @include respond-to("small") {
+      display: none;
+    }
+  }
+  button, input {
+    margin: 5px;
   }
 }

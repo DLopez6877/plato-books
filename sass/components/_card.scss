@@ -16,6 +16,9 @@
     width: 50%;
     float: left;
   }
+  @include respond-to("small") {
+    @include grid-column(12);
+  }
 }
 
 .card-content {

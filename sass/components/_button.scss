@@ -2,3 +2,12 @@ button {
   @include button(shiny, $color-neutral);
   color: $color-primary-2;
 }
+
+.sliding-panel-button {
+  display: none;
+  @include respond-to("small") {
+    display: block;
+    float: right;
+    margin-top: 42.5px;
+  };
+}

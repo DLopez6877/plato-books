@@ -4,7 +4,10 @@
   background-color: $color-tertriary-1;
   padding-bottom: 30000px;
   margin-bottom: -30000px;
-  h2{
+  h2 {
+    @include respond-to("small") {
+      margin-top: 250px;
+    }
     text-align: center;
     color: white;
     font-size: 50px;
@@ -17,4 +20,8 @@
 .last-side {
   padding-bottom: 400px;
   margin-bottom: -400px;
+  @include respond-to("small") {
+    padding-bottom: 780px;
+    margin-bottom: -780px;
+  }
 }

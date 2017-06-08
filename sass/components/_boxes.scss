@@ -4,6 +4,9 @@
   float: right;
   h2{
     @include textHeader;
+    @include respond-to("large") {
+      font-size: 25px;
+    }
   }
 
   @include clearfix;
@@ -13,18 +16,32 @@
   .wrapper >:hover {
     @include hoverBox;
   }
+
 }
 
 .box {
   position: relative;
   opacity: .7;
   @include box-style(3);
+
+  @include respond-to("medium") {
+    &.scifi, &.kids {
+      @include box-style(12);
+    }
+    @include box-style(6);
+  }
 }
 
 .wrapper{
   width: 75.5%;
   float:left;
   @include clearfix;
+  @include respond-to("medium") {
+    width: 100%;
+    .box {
+      @include grid-column(12);
+    }
+  }
   .wide-box {
     @include box-style(12);
     position: relative;
@@ -37,6 +54,9 @@
   }
   .box {
     @include grid-column(4);
+    @include respond-to("medium") {
+      @include grid-column(12);
+    };
   }
 }
 
@@ -51,5 +71,9 @@
   height: calc(#{$box-height} * 2 + 20px);
   ol li{
     padding:5% 5px;
+  }
+  @include respond-to("medium") {
+    @include box-style(6);
+    float: right;
   }
 }

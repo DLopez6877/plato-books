@@ -571,9 +571,19 @@ header img {
   height: 124px;
 }
 header .login {
+  display: inline-block;
   float: right;
   text-align: right;
-  padding-top: 50px;
+  padding-top: 5px;
+  width: 300px;
+}
+@media (max-width: 660px) {
+  header .login {
+    display: none;
+  }
+}
+header button, header input {
+  margin: 5px;
 }
 
 section {
@@ -607,11 +617,85 @@ nav ul li {
   width: 10%;
   text-align: center;
 }
-nav ul li:hover {
+nav ul:hover {
   background-color: #daffcd;
 }
-nav ul li:hover a {
+nav ul:hover a {
   color: #1d2742;
+}
+@media (max-width: 660px) {
+  nav {
+    display: none;
+  }
+}
+
+.sliding-panel-content {
+  position: fixed;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background: #404040;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  transform: translateX(-220px);
+  transition: all 0.25s linear;
+  z-index: 999999;
+}
+.sliding-panel-content ul {
+  padding: 0;
+  margin: 0;
+}
+.sliding-panel-content li {
+  list-style: none;
+}
+.sliding-panel-content li a {
+  border-bottom: 1px solid #333;
+  color: #fff;
+  display: block;
+  font-weight: bold;
+  padding: 1em;
+  text-decoration: none;
+}
+.sliding-panel-content li a:focus {
+  background-color: #4d4d4d;
+}
+.sliding-panel-content li a:hover {
+  background-color: #477DCA;
+  color: #fff;
+}
+.sliding-panel-content.is-visible {
+  transform: translateX(0);
+}
+
+.sliding-panel-fade-screen {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: black;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  visibility: hidden;
+  z-index: 999998;
+}
+.sliding-panel-fade-screen.is-visible {
+  opacity: 0.4;
+  visibility: visible;
+}
+
+.sliding-panel-button {
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+}
+.sliding-panel-button img {
+  height: 1.3em;
 }
 
 .side-content {
@@ -629,10 +713,21 @@ nav ul li:hover a {
   margin-top: 200px;
   white-space: pre;
 }
+@media (max-width: 660px) {
+  .side-content h2 {
+    margin-top: 250px;
+  }
+}
 
 .last-side {
   padding-bottom: 400px;
   margin-bottom: -400px;
+}
+@media (max-width: 660px) {
+  .last-side {
+    padding-bottom: 780px;
+    margin-bottom: -780px;
+  }
 }
 
 footer {
@@ -641,6 +736,10 @@ footer {
   height: 100px;
   text-align: center;
   transform: skewY(-4deg);
+}
+footer img {
+  width: 28px;
+  padding: 10px 5px;
 }
 
 button {
@@ -675,6 +774,17 @@ button:disabled {
   opacity: 0.5;
 }
 
+.sliding-panel-button {
+  display: none;
+}
+@media (max-width: 660px) {
+  .sliding-panel-button {
+    display: block;
+    float: right;
+    margin-top: 42.5px;
+  }
+}
+
 .boxes {
   width: 85%;
   max-width: 1240px;
@@ -692,6 +802,11 @@ button:disabled {
   position: absolute;
   top: 50%;
   left: 50%;
+}
+@media (max-width: 1100px) {
+  .boxes h2 {
+    font-size: 25px;
+  }
 }
 .boxes::after {
   clear: both;
@@ -721,6 +836,20 @@ button:disabled {
   float: left;
   margin-left: 20px;
 }
+@media (max-width: 800px) {
+  .box {
+    margin-top: 20px;
+    width: calc(50% - 30px);
+    float: left;
+    margin-left: 20px;
+  }
+  .box.scifi, .box.kids {
+    margin-top: 20px;
+    width: calc(100% - 40px);
+    float: left;
+    margin-left: 20px;
+  }
+}
 
 .wrapper {
   width: 75.5%;
@@ -730,6 +859,16 @@ button:disabled {
   clear: both;
   content: "";
   display: table;
+}
+@media (max-width: 800px) {
+  .wrapper {
+    width: 100%;
+  }
+  .wrapper .box {
+    width: calc(100% - 40px);
+    float: left;
+    margin-left: 20px;
+  }
 }
 .wrapper .wide-box {
   margin-top: 20px;
@@ -747,6 +886,13 @@ button:disabled {
   width: calc(33.33333% - 26.66667px);
   float: left;
   margin-left: 20px;
+}
+@media (max-width: 800px) {
+  .wrapper .box {
+    width: calc(100% - 40px);
+    float: left;
+    margin-left: 20px;
+  }
 }
 
 .tall-box {
@@ -766,6 +912,15 @@ button:disabled {
 }
 .tall-box ol li {
   padding: 5% 5px;
+}
+@media (max-width: 800px) {
+  .tall-box {
+    margin-top: 20px;
+    width: calc(50% - 30px);
+    float: left;
+    margin-left: 20px;
+    float: right;
+  }
 }
 
 .cards {
@@ -789,6 +944,13 @@ button:disabled {
   max-height: 400px;
   width: 50%;
   float: left;
+}
+@media (max-width: 660px) {
+  .card {
+    width: calc(100% - 40px);
+    float: left;
+    margin-left: 20px;
+  }
 }
 
 .card-content {
@@ -814,11 +976,25 @@ button:disabled {
   float: left;
   margin-left: 20px;
 }
+@media (max-width: 660px) {
+  .event {
+    width: calc(100% - 40px);
+    float: left;
+    margin-left: 20px;
+  }
+}
 .event .event-bg {
   position: relative;
   background-image: url(../img/jack.jpg);
   background-size: cover;
   background-position: center;
+  height: 250px;
+}
+.event .event2 {
+  position: relative;
+  background-image: url(../img/storytelling.jpg);
+  background-size: cover;
+  background-position: 80%;
   height: 250px;
 }
 .event h2 {
