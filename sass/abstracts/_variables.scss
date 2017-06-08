@@ -9,10 +9,25 @@ $color-secondary-2: #daffcd;
 	// Main Secondary color (2) */
 $color-tertriary-1: #F4817B;
 $color-tertriary-2: #FFCBC8;
-$color-neutral: #eee;
+$color-neutral: #e7e1d5;
+
 
 $primary-text: 'Abril Fatface', cursive;
 $secondary-text: 'Advent Pro', sans-serif;
 $normal-text: 'Dosis', sans-serif;
 
+
+
+
 $page-padding: 0 5%;
+
+// section 1 pics
+$icons-dir: "../img";
+
+$box-height: 300px;
+
+$breakpoints: (
+  'medium': (min-width: 790px),
+  'large': (min-width: 1100px),
+  'x-large': (min-width: 1470px),
+);

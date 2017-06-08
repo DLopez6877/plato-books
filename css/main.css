@@ -1,3 +1,50 @@
+.box {
+  height: 300px;
+  background-size: contain;
+}
+.box.kids {
+  background-image: url("../img/kids.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.box.mystery {
+  background-image: url("../img/mystery.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.box.fiction {
+  background-image: url("../img/fiction.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.box.teens {
+  background-image: url("../img/teens.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.box.self {
+  background-image: url("../img/self.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.box.scifi {
+  background-image: url("../img/scifi.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.box.nonfiction {
+  background-image: url("../img/nonfiction.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -479,10 +526,34 @@ table {
 
 body {
   font-family: "Dosis", sans-serif;
+  position: relative;
+}
+body::after {
+  content: "";
+  background: url("../img/body-bg.jpg");
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background-size: cover;
+  z-index: -1;
 }
 
 a {
   color: white;
+}
+
+main {
+  max-width: 1470px;
+  margin: 0 auto;
+  background-color: white;
+}
+@media (min-width: 1470px) {
+  main {
+    padding-left: 20px;
+  }
 }
 
 header {
@@ -512,7 +583,8 @@ section::after {
 }
 
 section:last-of-type {
-  margin-bottom: 150px;
+  overflow: visible;
+  margin-bottom: 100px;
 }
 
 nav ul {
@@ -551,6 +623,11 @@ nav ul li:hover a {
   white-space: pre;
 }
 
+.last-side {
+  padding-bottom: 300px;
+  margin-bottom: -300px;
+}
+
 footer {
   color: white;
   background-color: #1d2742;
@@ -571,12 +648,24 @@ footer {
 }
 
 .box {
+  position: relative;
   margin-top: 20px;
-  background-color: #eee;
-  height: 200px;
   width: calc(25% - 25px);
   float: left;
   margin-left: 20px;
+}
+.box h2 {
+  font-family: "Advent Pro", sans-serif;
+  font-weight: bolder;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  text-shadow: 2px 2px 2px #3d4f80;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 
 .wrapper {
@@ -590,11 +679,13 @@ footer {
 }
 .wrapper .wide-box {
   margin-top: 20px;
-  background-color: #eee;
-  height: 200px;
   width: calc(100% - 40px);
   float: left;
   margin-left: 20px;
+  background-image: url("../img/all.jpg");
+  background-size: cover;
+  background-position: 10% 50%;
+  height: 300px;
 }
 .wrapper .box {
   width: calc(33.33333% - 26.66667px);
@@ -604,8 +695,6 @@ footer {
 
 .tall-box {
   margin-top: 20px;
-  background-color: #eee;
-  height: 420px;
   width: calc(25% - 25px);
   float: left;
   margin-left: 20px;
@@ -613,11 +702,14 @@ footer {
   margin-left: 0;
   margin-right: 20px;
   overflow: hidden;
+  background-color: #e7e1d5;
+  height: calc(300px * 2 + 20px);
 }
 
 .cards {
   width: 85%;
   float: right;
+  max-width: 1240px;
 }
 
 .card {
@@ -629,6 +721,7 @@ footer {
   margin-top: 20px;
 }
 .card img {
+  height: 400px;
   width: 50%;
   float: left;
 }
@@ -652,8 +745,6 @@ footer {
 
 .event {
   margin-top: 20px;
-  background-color: #eee;
-  height: 400px;
   width: calc(50% - 30px);
   float: left;
   margin-left: 20px;

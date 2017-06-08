@@ -6,7 +6,7 @@
 }
 
 .event {
-  @include box-style(400px, 6);
+  @include box-style(6);
   .event-bg {
     position: relative;
     background-image: url(../img/jack.jpg);

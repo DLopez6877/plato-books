@@ -6,7 +6,11 @@
 }
 
 .box {
-  @include box-style(200px, 3);
+  position: relative;
+  @include box-style(3);
+  h2{
+    @include textHeader;
+  }
 }
 
 .wrapper{
@@ -14,18 +18,24 @@
   float:left;
   @include clearfix;
   .wide-box {
-    @include box-style(200px, 12);
+    @include box-style(12);
+    background-image: url('../img/all.jpg');
+    background-size: cover;
+    background-position: 10% 50%;
+    height: $box-height;
+
   }
   .box {
     @include grid-column(4);
   }
 }
 
-
 .tall-box {
-  @include box-style(420px, 3);
+  @include box-style(3);
   width: calc(24.5% - 20px);
   margin-left: 0;
   margin-right: 20px;
   overflow: hidden;
+  background-color: $color-neutral;
+  height: calc(#{$box-height} * 2 + 20px);
 }
