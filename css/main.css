@@ -617,10 +617,10 @@ nav ul li {
   width: 10%;
   text-align: center;
 }
-nav ul:hover {
+nav ul li:hover {
   background-color: #daffcd;
 }
-nav ul:hover a {
+nav ul li:hover a {
   color: #1d2742;
 }
 @media (max-width: 660px) {
